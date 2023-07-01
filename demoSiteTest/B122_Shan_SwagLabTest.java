@@ -6,7 +6,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class AddToCartTest {
+public class B122_Shan_SwagLabTest {
 
 	public static void main(String[] args) throws InterruptedException {
 
