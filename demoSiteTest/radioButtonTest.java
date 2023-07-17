@@ -27,9 +27,14 @@ public class radioButtonTest {
 		System.out.println(radioButton.isEnabled());
 		System.out.println(radioButton.isSelected());
 		
-		driver.findElement(By.id("female")).click();
+		WebElement rdo2 = driver.findElement(By.id("female"));
+		System.out.println(rdo2.isEnabled());
+		rdo2.click();
 		Thread.sleep(1000);
-		driver.findElement(By.id("other")).click();
+		
+		WebElement rdo3 = driver.findElement(By.id("other"));
+		System.out.println(rdo3.isEnabled());
+		rdo3.click();
 		Thread.sleep(1000);
 		
 		driver.close();

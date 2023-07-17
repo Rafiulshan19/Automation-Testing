@@ -27,6 +27,8 @@ public class dropDownTest {
 		Thread.sleep(1000);
 		selectOp.selectByVisibleText("Option 3");
 		Thread.sleep(1000);
+		
+		driver.quit();
 	}
 
 }
