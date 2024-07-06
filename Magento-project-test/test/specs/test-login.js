@@ -7,6 +7,7 @@ import subcategoryMultimenu from "../pageobjects/subcategory.multimenu.js"
 import searchProduct from "../pageobjects/search.product.js"
 import paginationSortingProducts from "../pageobjects/pagination.sorting.products.js"
 import filterProducts from "../pageobjects/filter.products.js"
+import singleProduct from "../pageobjects/single.product.js"
 
 describe("Testing login functionality", ()=>{
     
@@ -47,6 +48,11 @@ describe("Testing login functionality", ()=>{
         await imageForAutomation.clickOnImage()
     })
 
+    //------------------------Searching Products------------------------------
+    it("Should search product and redirect to related product page", async ()=>{
+        await searchProduct.searchPlayAutomation('Rapha Sports Short')
+    })
+
     //------------------------Clicking Category from the Menu bar------------------------------
     it("Should select a category on the menubar and redirect to that category product page", async ()=>{
         await menubarLuma.clickOnCateroyInMennuBar()
@@ -62,11 +68,6 @@ describe("Testing login functionality", ()=>{
         await subcategoryMultimenu.clickOnCategoryMultiMenu()
     })
 
-    //------------------------Searching Products------------------------------
-    it("Should search product and redirect to related product page", async ()=>{
-        await searchProduct.searchPlayAutomation('Rapha Sports Short')
-    })
-
     //------------------------Pagination to get more Products------------------------------
     it("Should display more and soting products  into the same product page", async ()=>{
         await paginationSortingProducts.selectOptionForSortingProducts()
@@ -77,7 +78,11 @@ describe("Testing login functionality", ()=>{
     it("Should filter the products into product page", async ()=>{
         await filterProducts.filterPlayAutomation()
     })
-
+    //------------------------Single Product ------------------------------
+    it("Should redirect to single product page", async ()=>{
+        await singleProduct.clickOnImageOfProduct()
+        await singleProduct.singleProductPlayAutomation('2')
+    })
 
 
 })
